@@ -8,8 +8,8 @@ import SiteFooter from './components/SiteFooter.vue'
 <template>
     <SiteHeader />
     <img class="splash-img" src="/artwork/bethesda station fills.jpg" />
-    <PageSection>
-        <p><em>Hello! My name is Alex Stiff.</em></p>
+    <PageSection style="background-color: #ebebeb;">
+        <p><b>Hello! My name is Alex Stiff.</b></p>
         <p>I'm an artist and designer in the Washington, D.C. area. I do animation background design and illustration, as well as video production, motion graphics and editing.</p>
         <p>Have a look around my site, or get in touch via email at nalexstiff@gmail.com.</p>
     </PageSection>
@@ -24,5 +24,6 @@ import SiteFooter from './components/SiteFooter.vue'
 .splash-img {
     width: 100%;
     margin-top: -250px;
+    display: block;
 }
 </style>
