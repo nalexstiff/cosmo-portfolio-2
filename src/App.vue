@@ -7,7 +7,7 @@ import SiteFooter from './components/SiteFooter.vue'
 
 <template>
     <SiteHeader />
-    <!-- splash image goes here -->
+    <img class="splash-img" src="/artwork/bethesda station fills.jpg" />
     <PageSection>
         <p><em>Hello! My name is Alex Stiff.</em></p>
         <p>I'm an artist and designer in the Washington, D.C. area. I do animation background design and illustration, as well as video production, motion graphics and editing.</p>
@@ -21,4 +21,8 @@ import SiteFooter from './components/SiteFooter.vue'
 </template>
 
 <style scoped>
+.splash-img {
+    width: 100%;
+    margin-top: -250px;
+}
 </style>
