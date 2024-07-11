@@ -1,25 +1,61 @@
+<script setup>
+import { ref, computed, onMounted, onUnmounted } from 'vue'
+
+const scroll = ref(0)
+
+function handleScroll (event) {
+    scroll.value = window.scrollY
+}
+
+onMounted(() => {
+    window.addEventListener("scroll", handleScroll)
+})
+onUnmounted(() => {
+    window.removeEventListener("scroll", handleScroll)
+})
+
+const navbarHeight = computed(() => {
+    return scroll.value > 140 ? 90 : 230 - scroll.value
+})
+
+const signHeight = computed(() => {
+    return 156 * ((140 - Math.min(scroll.value, 140)) / 140) + 100
+})
+
+const signMargin = computed(() => {
+    return -10 * ((140 - Math.min(scroll.value, 140)) / 140) - 6
+})
+
+</script>
+
 <template>
     <div class="navbar">
-        <div class="navbar-contents">
-            <div class="logo-container">
-                <img class="logo-img" src="/cosmonas-sign.png" />
-            </div>
-            <div class="navlinks-container">
-                <a class="navlink">backgrounds</a>
-                <a class="navlink">video</a>
-                <a class="navlink">contact</a>
-                <a class="navlink">blog</a>
+        <div class="navbar-background" :style="{ height: navbarHeight + 'px' }">
+            <div class="navbar-contents">
+                <div class="logo-container">
+                    <img class="logo-img" src="/cosmonas-sign.png" :style="{ width: signHeight + 'px', height: signHeight + 'px', marginTop: signMargin + 'px' }" />
+                </div>
+                <div class="navlinks-container">
+                    <a class="navlink">backgrounds</a>
+                    <a class="navlink">video</a>
+                    <a class="navlink">contact</a>
+                    <a class="navlink">blog</a>
+                </div>
             </div>
         </div>
+        <div class="shadow"></div>
     </div>
-    <div class="shadow"></div>
 </template>
 
 <style scoped>
 .navbar {
+    position: sticky;
+    top: 0;
+}
+
+.navbar-background {
     width: 100%;
     height: 230px;
-    position: sticky;
     display: block;
     background-color: #e0e0e0;
 }
@@ -41,7 +77,7 @@
 .navlink {
     display: inline-block;
     margin-left: 60px;
-    font-size: 36pt;
+    font-size: 32pt;
 }
 
 .logo-container {
