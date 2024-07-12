@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from "vue"
 
 const scroll = ref(0)
 
@@ -9,6 +9,7 @@ function handleScroll (event) {
 
 onMounted(() => {
     window.addEventListener("scroll", handleScroll)
+    scroll.value = window.scrollY
 })
 onUnmounted(() => {
     window.removeEventListener("scroll", handleScroll)
