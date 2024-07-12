@@ -14,8 +14,8 @@ import SiteFooter from './components/SiteFooter.vue'
         <p>Have a look around my site, or get in touch via email at nalexstiff@gmail.com.</p>
     </PageSection>
     <PageSection>
-        <Tile>backgrounds</Tile>
-        <Tile>video</Tile>
+        <Tile imgSrc="/tiles/backgrounds.jpg" linkUrl="backgrounds.html">backgrounds</Tile>
+        <Tile imgSrc="/tiles/video.jpg" linkUrl="video.html">video</Tile>
     </PageSection>
     <SiteFooter />
 </template>

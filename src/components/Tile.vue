@@ -9,15 +9,16 @@ const bgImg = computed(() => {
 </script>
 
 <template>
-    <div class="tile" :style="{ backgroundImage: bgImg }">
+    <a :href="props['linkUrl']" class="tile" :style="{ backgroundImage: bgImg }">
         <h2 class="tile-text">
             <slot></slot>
         </h2>
-    </div>
+    </a>
 </template>
 
 <style scoped>
 .tile {
+    display: block;
     margin: 20px 0 20px 0;
     width: 840px;
     height: 560px;
