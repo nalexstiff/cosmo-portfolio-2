@@ -37,9 +37,9 @@ const signMargin = computed(() => {
                     <img class="logo-img" src="/cosmonas-sign.png" :style="{ width: signHeight + 'px', height: signHeight + 'px', marginTop: signMargin + 'px' }" />
                 </div>
                 <div class="navlinks-container">
-                    <a class="navlink">backgrounds</a>
-                    <a class="navlink">video</a>
-                    <a class="navlink">contact</a>
+                    <a class="navlink" href="/backgrounds.html">backgrounds</a>
+                    <a class="navlink" href="/video.html">video</a>
+                    <a class="navlink" href="/contact.html">contact</a>
                     <a class="navlink">blog</a>
                 </div>
             </div>
@@ -80,6 +80,7 @@ const signMargin = computed(() => {
     display: inline-block;
     padding: 0 30px;
     font-family: "EB Garamond", "Times New Roman", serif;
+    color: black;
     text-decoration: none;
     font-size: 32pt;
 }
