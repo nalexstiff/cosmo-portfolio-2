@@ -25,6 +25,11 @@ const bgImg = computed(() => {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
+    color: #3f3f3f;
+}
+.tile:hover {
+    text-decoration: underline;
 }
 
 .tile-text {

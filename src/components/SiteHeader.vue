@@ -71,14 +71,21 @@ const signMargin = computed(() => {
 .navlinks-container {
     height: 100%;
     display: flex;
+    margin-right: -30px;
     justify-content: center;
     align-items: center;
 }
 
 .navlink {
     display: inline-block;
-    margin-left: 60px;
+    padding: 0 30px;
+    font-family: "EB Garamond", "Times New Roman", serif;
+    text-decoration: none;
     font-size: 32pt;
+}
+
+.navlink:hover {
+    text-decoration: underline;
 }
 
 .logo-container {
