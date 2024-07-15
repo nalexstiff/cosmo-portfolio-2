@@ -1,3 +1,52 @@
+@font-face {
+    font-family: "EB Garamond";
+    src:
+        local("EB Garamond"),
+        url("/src/assets/fonts/EBGARAMOND-VARIABLEFONT_WGHT.TTF");
+}
+
+@font-face {
+    font-family: "EB Garamond";
+    src:
+        local("EB Garamond"),
+        url("/src/assets/fonts/EBGARAMOND-ITALIC-VARIABLEFONT_WGHT.TTF");
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Lato";
+    src:
+        local("Lato"),
+        url("/src/assets/fonts/LATO-REGULAR.TTF");
+}
+
+@font-face {
+    font-family: "Lato";
+    src:
+        local("Lato"),
+        url("/src/assets/fonts/LATO-BOLD.TTF");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Lato";
+    src:
+        local("Lato"),
+        url("/src/assets/fonts/LATO-BOLDITALIC.TTF");
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Lato";
+    src:
+        local("Lato"),
+        url("/src/assets/fonts/LATO-ITALIC.TTF");
+    font-style: italic;
+}
+
 body {
     margin: 0;
+    font-size: 24pt;
+    font-family: "Lato", Verdana, sans-serif
 }
