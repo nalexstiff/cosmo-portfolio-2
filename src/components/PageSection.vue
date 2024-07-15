@@ -1,6 +1,13 @@
+<script setup>
+defineOptions({
+    inheritAttrs: false
+})
+
+</script>
+
 <template>
-    <div class="section">
-        <div class="section-content">
+    <div class="section" v-bind="$attrs">
+        <div class="section-content" :width="$attrs.width">
             <slot></slot>
         </div>
     </div>
