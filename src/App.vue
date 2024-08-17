@@ -23,7 +23,9 @@ import SiteFooter from './components/SiteFooter.vue'
 <style scoped>
 .splash-img {
     width: 100%;
-    margin-top: -250px;
+    margin-top: -132px;
     display: block;
+    position: relative;
+    z-index: -1;
 }
 </style>
