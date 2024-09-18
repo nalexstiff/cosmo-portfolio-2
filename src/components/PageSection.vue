@@ -1,13 +1,11 @@
 <script setup>
-defineOptions({
-    inheritAttrs: false
-})
+const props = defineProps(["contentWidth"])
 
 </script>
 
 <template>
-    <div class="section" v-bind="$attrs">
-        <div class="section-content" :width="$attrs.width">
+    <div class="section">
+        <div class="section-content" :style="{ width: contentWidth }">
             <slot></slot>
         </div>
     </div>

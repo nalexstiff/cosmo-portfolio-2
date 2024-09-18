@@ -46,14 +46,16 @@ const signMargin = computed(() => {
     <div class="navbar-background"></div>
     <div class="shadow"></div>
     <div class="navbar-contents">
-        <div class="logo-container">
+        <a href="/index.html" class="logo-container">
             <img class="logo-img" src="/cosmonas-sign.png" :style="{ width: signHeight + 'px', height: signHeight + 'px', marginTop: signMargin + 'px' }" />
-        </div>
+        </a>
         <div class="navlinks-container">
             <a class="navlink" href="/backgrounds.html">backgrounds</a>
             <a class="navlink" href="/video.html">video</a>
+            <!--
             <a class="navlink" href="/contact.html">contact</a>
             <a class="navlink">blog</a>
+            -->
         </div>
     </div>
 </template>
@@ -115,6 +117,7 @@ const signMargin = computed(() => {
 }
 
 .logo-container {
+    display: block;
     height: 100%;
 }
 

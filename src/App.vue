@@ -7,9 +7,9 @@ import SiteFooter from './components/SiteFooter.vue'
 
 <template>
     <SiteHeader />
-    <img class="splash-img" src="/artwork/bethesda station fills.jpg" />
+    <img class="splash-img" src="/artwork/station 2.jpg" />
     <PageSection style="background-color: #ebebeb;">
-        <p><b>Hello! My name is Alex Stiff.</b></p>
+        <p><b>Hello! My name is Nathan Alexander Stiff.</b></p>
         <p>I'm an artist and designer in the Washington, D.C. area. I do animation background design and illustration, as well as video production, motion graphics and editing.</p>
         <p>Have a look around my site, or get in touch via email at nalexstiff@gmail.com.</p>
     </PageSection>

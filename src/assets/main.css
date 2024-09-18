@@ -48,5 +48,6 @@
 body {
     margin: 0;
     font-size: 24pt;
-    font-family: "Lato", Verdana, sans-serif
+    font-family: "Lato", Verdana, sans-serif;
+    min-height: 100vh;
 }
