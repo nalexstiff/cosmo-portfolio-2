@@ -74,4 +74,26 @@ const images = [
 .gallery h1 {
     margin-left: 140px;
 }
+
+@media only screen and (max-width: 1080px) {
+    .gallery h1 {
+        margin-left: 60px;
+    }
+    .gallery {
+        margin: 40px;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .gallery {
+        width: 100%;
+        margin: 0px;
+    }
+    .gallery h1 {
+        margin-left: 32px;
+    }
+    .gallery-image {
+        border-style: none;
+    }
+}
 </style>

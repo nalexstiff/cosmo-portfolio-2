@@ -19,7 +19,7 @@ const bgImg = computed(() => {
 <style scoped>
 .tile {
     display: block;
-    margin: 20px 0 20px 0;
+    margin: 20px auto 20px auto;
     width: 840px;
     height: 560px;
     display: flex;
@@ -31,10 +31,29 @@ const bgImg = computed(() => {
 .tile:hover {
     text-decoration: underline;
 }
-
 .tile-text {
     color: #3f3f3f;
     font-size: 72pt;
+}
+@media only screen and (max-width: 1080px) {
+    .tile {
+        width: 600px;
+        height: 400px;
+    }
+}
+@media only screen and (max-width: 760px) {
+    .tile {
+        width: 100%;
+        height: 66vw;
+    }
+    .tile-text {
+        font-size: 64pt;
+    }
+}
+@media only screen and (max-width: 540px) {
+    .tile-text {
+        font-size: 42pt;
+    }
 }
 
 </style>

@@ -1,40 +1,40 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from "vue"
 
+const breakpointMid = 1080
+
 const scroll = ref(0)
-/*
-const signHeight = ref(256)
-const signMargin = ref(-90)
-*/
+const innerWidth = ref(0)
 
 function handleScroll (event) {
-    /*
-    const newScroll = window.scrollY
-    if (scroll.value == 0 && newScroll > 0) {
-        signHeight.value = 90
-        signMargin.value = -8
-    }
-    if (scroll.value > 0 && newScroll == 0) {
-        signHeight.value = 256
-        signMargin.value = -90
-    }
-    */
     scroll.value = window.scrollY
+}
+function handleResize (event) {
+    innerWidth.value = window.innerWidth
 }
 
 onMounted(() => {
     window.addEventListener("scroll", handleScroll)
+    window.addEventListener("resize", handleResize)
     scroll.value = window.scrollY
+    innerWidth.value = window.innerWidth
 })
 onUnmounted(() => {
     window.removeEventListener("scroll", handleScroll)
+    window.removeEventListener("resize", handleResize)
 })
 
 const signHeight = computed(() => {
+    if (innerWidth.value <= breakpointMid) {
+        return 90
+    }
     return 156 * ((140 - Math.min(scroll.value, 140)) / 140) + 100
 })
 
 const signMargin = computed(() => {
+    if (innerWidth.value <= breakpointMid) {
+        return 0
+    }
     const interp = ((70 - Math.min(scroll.value, 70)) / 70)
     return -80 * interp - 8
 })
@@ -83,9 +83,41 @@ const signMargin = computed(() => {
     display: flex;
     justify-content: space-between;
 }
+.shadow {
+    position: sticky;
+    top: 90px;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100px;
+    background-image: linear-gradient(black, rgba(0,0,0,0));
+    opacity: 0.2;
+}
+.logo-img {
+    height: 256px;
+    margin-top: -90px;
+    /*
+    transition-property: width, height, margin-top;
+    transition-duration: 0.2s;
+    */
+}
+@media only screen and (max-width: 1080px) {
+    .navbar-contents {
+        margin-top: -190px;
+    }
+    .shadow {
+        top: 90px;
+    }
+    .navbar-background-top {
+        height: 0px;
+    }
+    .logo-img {
+        height: 90px;
+    }
+}
 
 .navlinks-container {
-    height: 100%;
+    height: auto;
     display: flex;
     margin-right: -30px;
     justify-content: center;
@@ -118,26 +150,30 @@ const signMargin = computed(() => {
 
 .logo-container {
     display: block;
-    height: 100%;
+    height: 90px;
 }
 
-.logo-img {
-    height: 256px;
-    margin-top: -90px;
-    /*
-    transition-property: width, height, margin-top;
-    transition-duration: 0.2s;
-    */
+@media only screen and (max-width: 760px) {
+    .navbar-contents {
+        flex-direction: column;
+        height: auto;
+        background-color: #e0e0e0;
+        position: relative;
+    }
+    .navbar-background {
+        position: relative;
+    }
+    .shadow {
+        position: relative;
+    }
+    .navlinks-container {
+        flex-direction: column;
+        margin-right: 0px;
+    }
+    .logo-container {
+        display: flex;
+        justify-content: center;
+    }
 }
 
-.shadow {
-    position: sticky;
-    top: 90px;
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100px;
-    background-image: linear-gradient(black, rgba(0,0,0,0));
-    opacity: 0.2;
-}
 </style>

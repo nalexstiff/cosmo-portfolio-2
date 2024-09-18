@@ -1,11 +1,10 @@
 <script setup>
-const props = defineProps(["contentWidth"])
 
 </script>
 
 <template>
     <div class="section">
-        <div class="section-content" :style="{ width: contentWidth }">
+        <div class="section-content">
             <slot></slot>
         </div>
     </div>
@@ -23,5 +22,12 @@ const props = defineProps(["contentWidth"])
 .section-content {
     width: 840px;
     margin: 80px;
+}
+@media only screen and (max-width: 760px) {
+    .section-content {
+        width: 100%;
+        margin: 0px;
+        padding: 20px;
+    }
 }
 </style>
