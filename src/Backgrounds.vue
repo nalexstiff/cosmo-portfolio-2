@@ -5,6 +5,18 @@ import SiteFooter from './components/SiteFooter.vue'
 
 const images = [
     {
+        src: "/artwork/fantasma-int-establishing-lines.jpg",
+        alt: "An interior art deco cafe theater. We are looking from the screen toward a bar and seating area with a balcony above."
+    },
+    {
+        src: "/artwork/fantasma-int-panorama-lines.jpg",
+        alt: "An interior art deco cafe theater. We are at one end of the bar, looking at a fisheye panorama from the bar to the screen."
+    },
+    {
+        src: "/artwork/fantasma-ext-establishing-lines.jpg",
+        alt: "An exterior street. Old fashioned tree-lined American small town main street, with a shop, a small apartment building, a rowhouse and a large brick warehouse converted to a theater. The billboard sign on top reads FANTASMA."
+    },
+    {
         src: "/artwork/seaport overpass.jpg",
         alt: "An elevated street passing over another street in a Northeastern city, surrounded by midrise buildings with ornate brick facades."
     },
@@ -21,20 +33,12 @@ const images = [
         alt: "A painting of a potion bottle with a label reading \"Dont touch\" on a wooden background, surrounded by cluttered books, bottles, candles and other arcane implements."
     },
     {
-        src: "/artwork/potion props.jpg",
-        alt: "Drawings of assorted bottles, candles and other items."
-    },
-    {
         src: "/artwork/treasure paint.jpg",
         alt: "A painting of a large treasure chest in a vast dungeon hall, surrounded by piles of gold. A skeleton sits leaning against the right side of the chest clutching at a sword between its ribs."
     },
     {
         src: "/artwork/creek 3.jpg",
         alt: "A drawing of a Victorian cottage next to a willow tree in the woods, with a creek running through the foreground to the left."
-    },
-    {
-        src: "/artwork/creek kit.jpg",
-        alt: "Drawings of assorted trees, rocks and shrubs."
     }
 ]
 </script>
