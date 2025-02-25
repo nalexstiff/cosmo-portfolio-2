@@ -48,6 +48,7 @@ const images = [
     <PageSection content-width="1000px" content-margin="80px">
         <div class="gallery">
             <h1>Backgrounds</h1>
+            <p> Animation background designs </p>
             <img class="gallery-image" v-for="image in images" :src="image.src" :alt="image.alt" />
         </div>
     </PageSection>
@@ -70,32 +71,7 @@ const images = [
     background-color: #e0e0e0;
 }
 
-/*.gallery {
-    width: 1540px;
-    margin: 80px;
-}*/
-
-.gallery h1 {
-    margin-left: 140px;
-}
-
-@media only screen and (max-width: 1080px) {
-    .gallery h1 {
-        margin-left: 60px;
-    }
-    /*.gallery {
-        margin: 40px;
-    }*/
-}
-
 @media only screen and (max-width: 760px) {
-    /*.gallery {
-        width: 100%;
-        margin: 0px;
-    }*/
-    .gallery h1 {
-        margin-left: 32px;
-    }
     .gallery-image {
         border-style: none;
     }
