@@ -8,14 +8,14 @@ import SiteFooter from './components/SiteFooter.vue'
 <template>
     <SiteHeader />
     <img class="splash-img" src="/artwork/station 2.jpg" />
-    <PageSection style="background-color: #ebebeb;">
+    <PageSection style="background-color: #ebebeb;" content-width="840px" content-margin="80px">
         <p><b>Hello! My name is Nathan Alexander Stiff.</b></p>
         <p>I'm an artist and designer in the Washington, D.C. area. I do animation background design and illustration, as well as video production, motion graphics and editing.</p>
         <p>Have a look around my site, or get in touch via email at nalexstiff@gmail.com.</p>
     </PageSection>
     <PageSection>
-        <Tile imgSrc="/tiles/backgrounds.jpg" linkUrl="backgrounds.html">backgrounds</Tile>
-        <Tile imgSrc="/tiles/video.jpg" linkUrl="video.html">video</Tile>
+        <Tile imgSrc="/tiles/tile-bg.jpg" linkUrl="backgrounds.html">backgrounds</Tile>
+        <Tile imgSrc="/tiles/tile-anim.jpg" linkUrl="video.html">animation</Tile>
     </PageSection>
     <SiteFooter />
 </template>
