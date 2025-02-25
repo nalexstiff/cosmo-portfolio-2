@@ -65,9 +65,12 @@ const signMargin = computed(() => {
     height: 140px;
     width: 100%;
     background-color: #e0e0e0;
+    position: relative;
+    z-index: 1100;
 }
 .navbar-background {
     position: sticky;
+    z-index: 1100;
     top: 0;
     height: 90px;
     width: 100%;
@@ -76,6 +79,7 @@ const signMargin = computed(() => {
 
 .navbar-contents {
     position: sticky;
+    z-index: 1101;
     top: 0;
     margin-top: -260px;
     padding: 0 120px 0 120px;
