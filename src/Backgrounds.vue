@@ -45,12 +45,12 @@ const images = [
 
 <template>
     <SiteHeader />
-    <div class="gallery-section">
+    <PageSection content-width="1000px" content-margin="80px">
         <div class="gallery">
             <h1>Backgrounds</h1>
             <img class="gallery-image" v-for="image in images" :src="image.src" :alt="image.alt" />
         </div>
-    </div>
+    </PageSection>
     <SiteFooter></SiteFooter>
 </template>
 
@@ -70,10 +70,10 @@ const images = [
     background-color: #e0e0e0;
 }
 
-.gallery {
+/*.gallery {
     width: 1540px;
     margin: 80px;
-}
+}*/
 
 .gallery h1 {
     margin-left: 140px;
@@ -83,16 +83,16 @@ const images = [
     .gallery h1 {
         margin-left: 60px;
     }
-    .gallery {
+    /*.gallery {
         margin: 40px;
-    }
+    }*/
 }
 
 @media only screen and (max-width: 760px) {
-    .gallery {
+    /*.gallery {
         width: 100%;
         margin: 0px;
-    }
+    }*/
     .gallery h1 {
         margin-left: 32px;
     }
