@@ -52,6 +52,7 @@ const signMargin = computed(() => {
         <div class="navlinks-container">
             <a class="navlink" href="/backgrounds.html">backgrounds</a>
             <a class="navlink" href="/video.html">video</a>
+            <a class="navlink" href="/illustration.html">illustration</a>
             <!--
             <a class="navlink" href="/contact.html">contact</a>
             <a class="navlink">blog</a>
