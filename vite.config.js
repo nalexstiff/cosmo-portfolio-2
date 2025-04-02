@@ -19,7 +19,8 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         backgrounds: resolve(__dirname, 'backgrounds.html'),
-        video: resolve(__dirname, 'video.html')
+        video: resolve(__dirname, 'video.html'),
+        illustration: resolve(__dirname, 'illustration.html')
       }
     }
   }
