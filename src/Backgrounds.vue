@@ -1,7 +1,10 @@
 <script setup>
+import { ref } from "vue"
+
 import SiteHeader from './components/SiteHeader.vue'
 import PageSection from './components/PageSection.vue'
 import SiteFooter from './components/SiteFooter.vue'
+import Lightbox from './components/Lightbox.vue'
 
 const images = [
     {
@@ -41,15 +44,52 @@ const images = [
         alt: "A drawing of a Victorian cottage next to a willow tree in the woods, with a creek running through the foreground to the left."
     }
 ]
+
+// code for handling lightbox events
+const imgSrc = ref("")
+const imgIndex = ref(0)
+const imgAlt = ref("")
+const lightboxVisible = ref(false)
+
+function openLightbox (index) {
+    console.log(index)
+    imgIndex.value = index
+    let image = images[index]
+    imgSrc.value = image.src
+    imgAlt.value = image.alt
+    lightboxVisible.value = true
+}
+
+function closeLightbox () {
+    lightboxVisible.value = false
+}
+
+function lightboxPrev () {
+    let prevIndex = imgIndex.value - 1
+    if (prevIndex < 0) {
+        prevIndex = images.length - 1
+    }
+    openLightbox(prevIndex)
+}
+
+function lightboxNext () {
+    let nextIndex = imgIndex.value + 1
+    if (nextIndex >= images.length) {
+        nextIndex = 0
+    }
+    openLightbox(nextIndex)
+}
+
 </script>
 
 <template>
+    <Lightbox :img-src="imgSrc" :img-alt="imgAlt" :open="lightboxVisible" @prev-img="lightboxPrev" @next-img="lightboxNext" @close="closeLightbox" />
     <SiteHeader />
     <PageSection content-width="1000px" content-margin="80px">
         <div class="gallery">
             <h1>Backgrounds</h1>
             <p> Animation background designs </p>
-            <img class="gallery-image" v-for="image in images" :src="image.src" :alt="image.alt" />
+            <img class="gallery-image" v-for="(image, index) in images" :src="image.src" :alt="image.alt" @click="openLightbox(index)" />
         </div>
     </PageSection>
     <SiteFooter></SiteFooter>
@@ -61,6 +101,7 @@ const images = [
     margin-bottom: 60px;
     border-style: solid;
     border-width: 4px;
+    cursor: pointer;
 }
 
 .gallery-section {
